@@ -1,10 +1,11 @@
 {
-  "name": "vue-msal",
-  "version": "3.2.0",
+  "name": "vue-msal-2",
+  "version": "1.0.0",
   "description": "Vue plugin for using Microsoft Authentication Library (MSAL)",
   "main": "dist/plugin.js",
   "scripts": {
     "build": "tsc",
+    "compile": "tsc && babel lib --out-dir dist --extensions .ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,7 +18,7 @@
   "author": "Marios Vertopoulos",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mvertopoulos/vue-msal/issues"
+    "url": "https://github.com/arunravilla/vue-msal/issues"
   },
   "contributors": [
     {
@@ -27,13 +28,13 @@
   "eslintIgnore": [
     "lib/*.*"
   ],
-  "homepage": "https://github.com/mvertopoulos/vue-msal#readme",
+  "homepage": "https://github.com/arunravilla/vue-msal#readme",
   "publishConfig": {
-    "access": "public"
+    "registry":"https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mvertopoulos/vue-msal.git"
+    "url": "git+https://github.com/arunravilla/vue-msal.git"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -41,7 +42,12 @@
     "msal": "^1.4.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-typescript": "^7.13.0",
     "@types/lodash": "^4.14.138",
+    "@types/node": "^14.14.41",
     "typescript": "^4.2.4"
   }
 }
